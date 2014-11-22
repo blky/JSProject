@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Membership Signup with phone validation</title>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+
+	<style>
+	/* type selectors */
+article, aside, figure, footer, header, nav, section {
+    display: block;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 0 auto;
+    width: 1200px;
+    border: 3px solid blue;
+    padding: 10px 20px;
+}
+h1 {
+	color: blue;
+}
+span {
+	color: red;
+}
+section {
+    padding: 0 2em 1em;
+}
+label {
+	float: left;
+    width: 11em;
+    text-align: right;
+}
+input, select {
+    width: 14em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: .5em;
+}
+#buttons input {
+	width: 7em;
+}
+label.error {
+	float: none;
+	color: red;
+	font-size: 87.5%;
+}
+fieldset {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-top: .5em;
+}
+legend {
+    color: blue;
+    font-weight: bold;
+    font-size: 85%;
+    margin-bottom: .5em;
+}
+#expiry_month {
+	width: 3em;
+}
+#expiry_year {
+	width: 4em;
+	margin: 0;
+}
+
+</style>
+<script>
+$(document).ready(function() { 
+	$(":text, #email").after("<span>*</span>");
+	
+	 $("#first").focus();
+	$("#mm_webinput").submit(
+			function(event) {
+			var isValid = true;
+			var emailPattern = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/;
+			var email = $("#email").val();
+			if (email == "") { 
+				$("#email").next().text("This field is required.");
+				isValid = false;
+			} else if ( !emailPattern.test(email) ) {
+				$("#email").next().text("Must be a valid email address.");
+				isValid = false;
+			} else {
+				$("#email").next().text("");
+			} 
+			 	// validate the email entry with a regular expression
+			// and check for equality with email_2
+			var emailPattern = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/;
+
+			if ($("#email_2").val() == "") { 
+				$("#email_2").next().text("This field is required.");
+				isValid = false; 
+			} else if ($("#email_2").val() !== $("#email").val() ) { 
+				$("#email_2").next().text("Must equal first email entry.");
+				isValid = false;
+			} else {
+				$("#email_2").next().text("");
+			}
+			
+			// trim and validate the first name entry
+			var firstName = $("#first").val().trim();
+			if (firstName == "") {
+				$("#first").next().text("This field is required.");
+				isValid = false;
+			} 
+			else {
+				$("#first").val(firstName);
+				$("#first").next().text("");
+			}
+			// trim and validate the last name entry
+			var lastName = $("#last").val().trim();
+			if (lastName == "") {
+				$("#last").next().text("This field is required.");
+				isValid = false;
+			} 
+			else {
+				$("#last").val(lastName);
+				$("#last").next().text("");
+			}
+			// validate the phone number ( with regular expression)
+			var phonePattern = /\b\d\d\d-\d\d\d-\d\d\d\d\b/;
+			var phone = $("#phone").val();
+			if (phone == "") {
+				$("#phone").next().text("This field is required.");
+				isValid = false;
+			} else if ( !phonePattern.test(phone) ) {
+				$("#phone").next().text("Use 999-999-9999 format.");
+				isValid = false;
+			}else {
+				$("#phone").next().text("");
+			} 
+			  
+			// validate the ID_number entry(for length and isNaN)
+			var ID_numberPattern = /\b\d\d\d\d\d\d\b/;
+			var ID_number = $("#ID_number").val();
+			if (ID_number == "") {
+				$("#ID_number").next().text("This field is required.");
+				isValid = false;
+			} else if ( !ID_numberPattern.test(ID_number) ) {
+				$("#ID_number").next().text("Student ID must have 6 numbers.");
+				isValid = false;
+			}else {
+				$("#ID_number").next().text("");
+			}
+
+			// trim and validate the instructor entry
+			var instructor = $("#instructor").val().trim();
+			if (instructor == "") {
+				$("#instructor").next().text("This field is required.");
+				isValid = false;
+			} 
+			else {
+				$("#instructor").val(instructor);
+				$("#instructor").next().text("");
+			}
+			// trim and validate the software entry
+			var software = $("#software").val().trim();
+			if (software == "") {
+				$("#software").next().text("This field is required.");
+				isValid = false;
+			} 
+			else {
+				$("#software").val(software);
+				$("#software").next().text("");
+			}
+			//extr credit
+			var className =  $('#class option:selected').val();		 
+			if (className == "select") {
+				$("#classMsg").html("Please select a class");
+				isValid = false;
+			} else {
+				$("#classMsg").html(""); 
+			} 
+			  
+			var semester =  $('#semester option:selected').val();
+		 	if (semester == "select") {
+				$("#semesterMsg").html("Please select a semester");
+				isValid = false;
+			} else {
+				$("#semesterMsg").html(""); 
+			} 
+			  
+			 var year =  $('#year option:selected').val();		 
+			if (year == "select") {
+				$("#yearMsg").html("Please select a year");
+				isValid = false;
+			} else {
+				$("#yearMsg").html(""); 
+			} 
+			  
+			// prevent the submission of the form if any entries are invalid 
+			
+			  
+			if (isValid == false) {
+				event.preventDefault();				
+			}
+		} // end function
+	);	// end submiy
+}); // end ready
+</script>
+</head>
+<body>
+    <section>
+        <h1>Enter your Data for the Multimedia Festival:</h1>
+        <form id="mm_webinput" name="mm_webinput" action="feedback.html" method="get">
+        	<fieldset>
+	    	<legend>Student Info</legend>
+	    	
+		        <label for="first">First Name:</label>
+		        <input type="text" id="first" name="first"><br>
+		        	        
+				<label for="last">Last Name:</label>
+		        <input type="text" id="last" name="last"><br>
+		        	        
+				<label for="ID_number">Student ID:</label>
+		        <input type="text" id="ID_number" name="ID_number"><br>
+		        	        
+		        <label for="email">Email Address:</label>
+		        <input type="text" id="email" name="email"><br>
+		        	        
+		        <label for="email_2">Re-enter Email Address:</label>
+		        <input type="text" id="email_2" name="email_2"><br>
+		        	        
+		        <label for="phone">Phone:</label>
+		        <input type="text" id="phone" name="phone" placeholder="999-999-9999"><br>
+	   		 </fieldset>
+			<fieldset>
+				<legend>School Info</legend>
+			
+        	
+		        <label for="class">Class for the project:</label>
+				<select name="class" id="class">
+					<option value="select" selected="selected">Select</option>
+				    <option value="mm102A">mm102A</option>
+				    <option value="mm102B">mm102B</option>            
+				    <option value="mm103A">mm103A</option>
+				    <option value="mm103B">mm103B</option>
+				</select><span id="classMsg">*</span><br>
+				
+ 		        <label for="semester">Semester:</label>
+				<select name="semester" id="semester"> 
+				    <option value="select" selected="selected">Select</option>
+				    <option value="Fall">Fall</option>
+				    <option value="Spring">Spring</option>            
+				    <option value="Summer">Summer</option> 
+				</select> <span id="semesterMsg">*</span> <br>
+ 				
+		        <label for="year">Year:</label>
+				<select  name="year" id="year">
+					<option value="select" selected="selected">Select</option>
+				    <option value="2014">2014</option>
+				    <option value="2013">2013</option>            
+				    <option value="2012">2012</option>
+				    <option value="2011">2011</option>
+				</select><span id="yearMsg">*</span> <br><br>
+				
+				<label for="instructor">Instructor:</label>
+		        <input type="text" id="instructor" name="instructor"><br>
+	
+				<label for="software">Software:</label>
+		        <input type="text" id="software" name="software"><br>
+		        	        
+		        <label>&nbsp;</label>
+		        <input type="submit" id="submit" name="submit" value="Submit">
+		        <input type="reset" id="reset" name="reset" value="Reset"><br>
+			</fieldset>
+		 
+	    </form>
+    </section>
+</body>
+</html>

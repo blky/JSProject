@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chew gum</title>
+   	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 	
+   	<script>
+   	do {
+   		var count = prompt("How many times do I need to write on the board?");
+   		var printCount = parseInt(count);
+		if (   isNaN(count)  || printCount <1 ) {
+   			alert("Please enter valid number greater than 1 \n");
+   		}
+   	} while (printCount < 1 ||  isNaN(count) );
+   	var outputString ="";
+   	for(var i = 1; i< printCount +1; i++){
+    	  outputString += "Line" + i + ": I will not chew gum in class\n\n";
+    }  
+    alert (outputString);
+
+    </script>
+</head>
+<body>
+    <section>
+        <h1>This page is displayed after the JavaScript is executed</h1>
+    </section>
+</body>
+</html>
