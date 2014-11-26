@@ -1,0 +1,65 @@
+* {
+box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+html {
+	background: #92D8E6;
+}
+body {
+	/*some ways to definte margine*/
+	margin: 0; /*all four applied as 0 */
+	margin: 0 auto 50px; /*top, right, botton*/
+ 	margin: 10 auto 50px /*auto; top, right, botton, left*/
+
+	margin: 0 auto ; /* vertial, auto horizental */
+
+	width: 1000px;
+}
+header {
+	background: #0FF;
+	text-align: center;
+	padding: 10;
+}
+
+aside {
+	width: 200px;
+ }
+
+ main {
+ 	background: #FFA500;
+
+ }
+table,th,td {
+	border: 1px solid black;
+	text-align: center;
+
+}
+section {
+	background: #FFF;
+	width: 600px;
+	padding: 10;
+
+}
+aside, section {
+	float :left;
+}
+
+figure {
+	float:right;
+}
+
+section h2 {
+	clear:both;
+}
+.intro {
+	float: left;
+}
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
