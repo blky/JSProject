@@ -1,0 +1,36 @@
+* {
+	box-sizing: border-box;
+	--webkit-box-sizing: border-box;
+}
+section {
+	float: left;
+	height: 200px;
+	width: 200px;
+
+}
+.one {
+	background: yellow;
+}
+
+.two{
+	background: blue;
+}
+.three{
+	background: red;
+}
+
+body{
+	border: 1px solid black;
+	
+}
+
+/*http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+.cf:before,
+.cf:after {
+content: " "; /* 1 */
+display: table; /* 2 */
+}
+.cf:after {
+clear: both;
+}

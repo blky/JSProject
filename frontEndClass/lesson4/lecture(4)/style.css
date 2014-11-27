@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  margin: 0 auto;
+  position: relative;
+  width: 960px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.reopening {
+  background: red;
+  color: yellow;
+  left: 100px;
+  margin: 0;
+  position: absolute;
+  top: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  border: 2px solid black;
+  float: left;
+  height: 300px;
+  list-style: none;
+  position: relative;
+  width: 50%;
+}
+
+li h2 {
+  margin: 20px;
+}
+
+li h2, li img, .price {
+  position: absolute;
+}
+
+.price {
+  color: red;
+  font-size: 3em;
+}
+
+.cheese img {
+  bottom: 0;
+}
+
+.cheese .price {
+  right: 0;
+}
+
+.chicken h2 {
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.fruit h2 {
+  right: 0;
+  z-index: 1;
+}
+
+.bread h2, .bread .price {
+  text-align: center;
+  width: 100%;
+}
+
+.bread h2 {
+  margin-left: 0;
+  margin-right: 0;
+  z-index: 1;
+}
+
+.bread .price {
+  bottom: 0;
+}
+
+.bread img {
+  margin-left: -200px; /* 400 / 2 */
+  margin-top: -132.5px; /* 265 / 2 */
+  top: 50%;
+  left: 50%;
+}

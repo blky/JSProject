@@ -1,0 +1,102 @@
+* {
+box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+
+/*http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+.cf:before,
+.cf:after {
+content: " "; /* 1 */
+display: table; /* 2 */
+}
+.cf:after {
+clear: both;
+}
+
+body {
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+  }
+
+h1 {
+	text-align: center;
+}
+.reopening{
+	background: red;
+	color: yellow;
+	position: absolute;
+	left:100px;
+	top: 20px;
+	margin: 0;
+}
+.price {
+	color: red;
+	font-size: 3em;
+}
+ul {
+	padding: 0;	 
+
+}
+
+li {
+	border: 2px solid black;
+	list-style: none;
+	float: left;
+	width: 50%;
+	height: 300px;
+	font-family: Helvetica, sans-serif;
+	position: relative;
+	/*	overflow: hidden;
+
+*/
+}
+
+li h2 {
+	margin: 20px;
+}
+
+li h2, li img, .price {
+	position: absolute;
+}
+
+.cheese img  {
+	bottom: 0;
+
+}
+.cheese h2 {
+	right: 0;
+}
+
+.chicken h2 {
+	bottom: 0px;
+	right: 0; 
+	z-index: 1;
+}
+.fruit h2 {
+	right:0;
+	z-index: 1;
+}
+.bread h2 , .bread .price {
+	z-index: 1;
+	text-align: center;
+	width: 100%;
+}
+
+.bread h2 {
+	margin-left: 0;
+	margin-right: 0;
+	/*remove previous setting for h2*/
+}
+.bread .price {
+	bottom: 0;
+}
+
+.bread img {
+	margin-left: -200px;	/*half of the image width*/
+	margin-top: -132.5px; /*half of the image height*/
+	top: 50%;
+	left: 50%;
+ }
+

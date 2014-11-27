@@ -1,0 +1,130 @@
+
+* {
+box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+
+/*http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+.cf:before,
+.cf:after {
+content: " "; /* 1 */
+display: table; /* 2 */
+}
+.cf:after {
+clear: both;
+}
+ 
+ h1, h2, ul {
+    margin: 0;
+ }
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+header {
+    background: #005275 ;
+
+}
+/*logo stuff on top and bottom*/
+
+header h1 , footer h2 {
+    background:   no-repeat ;
+    overflow: hidden; /*hide if screen too small , but still have it if no css*/
+    text-indent: 100%; /*hide it outside the screen*/
+    white-space: nowrap; /*if long line of text, it does not enter the second line*/
+}
+header h1 {
+    background: url('../img/logo.png');
+    height: 50px;
+    width: 171px;
+}
+footer {
+    background: #002344;
+}
+footer h2 {
+    background: url('../img/logo_small.png') no-repeat;
+    height: 40px;
+    width: 137px;
+}
+
+nav {
+    background: #002344;
+}
+
+.hero {
+    background: #77a2b5 url('../img/hero.jpg') no-repeat 50% 50%;
+    padding-top: 220px;
+}
+.hero h1 {
+    font-weight: normal;
+    color: white;
+    margin: 0;
+}
+.hero h1 strong {
+    display: block; /*give strong elements a block elemet to show on different line*/
+}
+.sign-up-now {
+    color: #fff;
+    background: #77a2b5;
+    text-decoration: none;
+    font-size: 30px;
+    position: absolute;
+    right: 10px;
+    top: 37px;
+    border-radius: 10px;
+    padding: 10px 20px; 
+    border: 1px solid #002344;
+
+    background: -moz-linear-gradient(top, rgba(119,162,181,1) 0%, rgba(0,82,117,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(119,162,181,1)), color-stop(100%,rgba(0,82,117,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(119,162,181,1) 0%,rgba(0,82,117,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(119,162,181,1) 0%,rgba(0,82,117,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(119,162,181,1) 0%,rgba(0,82,117,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(119,162,181,1) 0%,rgba(0,82,117,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77a2b5', endColorstr='#005275',GradientType=0 ); /* IE6-9 */
+    Color format: Commen;
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5) inset, -1px -1px 1px rgba(0, 0, 0, 0.5) inset;
+
+}
+.hero__content {
+    background: gray;
+    background: rgba(0,0,0,.25);
+}
+.hero .container {
+    position: relative;
+    padding-top: 28px;
+    height: 130px;
+
+}
+.details {
+    background: #ece2c6
+}
+
+.details ul {
+    list-style: none;
+    padding:0;
+}
+
+.details li {   /*use icon image as backgorund here*/
+    width: 75%;
+    padding-left: 60pt;
+    background-repeat: no-repeat; /*default , no need to specify*/
+    background-position: 0 0 ;
+}
+
+.details__agile {
+    background: url('../img/agile.png');
+
+}
+.details__mobile {
+    background: url('../img/mobile.png');
+
+}
+.details__cloud {
+    background: url('../img/cloud.png');
+
+}
+
+
+
