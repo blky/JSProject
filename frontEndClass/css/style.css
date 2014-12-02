@@ -1,0 +1,72 @@
+@-webkit-keyframes slash-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+html {
+  background: linear-gradient(to right, #eeffee 0%, /*#aa4422 50%,*/ #eeeeff 100%);
+}
+
+body {
+  background: rgba(0, 0, 255, .1);
+}
+
+/*body :nth-child(even) {
+  background: yellow;
+}*/
+
+.no {
+  border: 3px solid red;
+  border-radius: 50px;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100px;
+}
+
+.no:after {
+  -webkit-animation: 1s slash-rotate linear infinite;
+  background: red;
+  content: '';
+  display: block;
+  height: 3px;
+  position: absolute;
+  top: 48.5px;
+  width: 100px;
+}
+
+p:not(.no) {
+  text-shadow: 2px 2px 0 white;
+  -webkit-column-count: 3;
+}
+
+p:not(.no):first-letter {
+  font-size: 5rem;
+}
+p:not(.no):first-line {
+  font-size: 2rem;
+}
+
+.box {
+  background: url('Sad-Dog-and-Cat.jpg') no-repeat;
+  background-size: 100% 100%; /* contain, cover */
+  border-radius: 100px;
+  box-shadow: 5px 5px 5px rgba(255, 0, 0, .5);
+  height: 100px;
+  position: absolute;
+  top: 0px;
+  transition: height 1s, width 2s;
+  left: 300px;
+  width: 100px;
+}
+
+.expand {
+  height: 300px;
+  width: 300px;
+}

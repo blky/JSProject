@@ -1,0 +1,43 @@
+css properties:
+  border-radius
+  colors
+  ::after, ::before
+  :nth-child
+  :not()
+  ::first-letter, ::first-line
+  box-shadow
+  text-shadow
+  gradient
+  animations
+  transform
+  transitions
+  background-size
+  background-attachment
+  border-images
+  columns
+  web fonts
+  ellipses
+  rem, vw, vh
+  flexbox
+  
+media queries...
+autoprefixer
+
+css4: ! subject selector, :matches()
+
+!div p {
+  ...
+}
+
+div p, header p, aside p, article p, footer p {
+
+}
+
+:matches(div, header, .some_class, #some_id) p {
+
+}
+
+<div>hi</div>
+<div><p>hello</p></div>
+
+how to support IE
