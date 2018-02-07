@@ -1,6 +1,6 @@
-learning notes for frontend 
+learning for front-end related. 
 ------------------------------
-/final include learning project :
+folder /final includes a  learning project with HTML, CSS and Javascript 
 
 
 ![introducing paris](https://github.com/blky/JSProject/blob/master/frontEndClass/final/index.jpg)
