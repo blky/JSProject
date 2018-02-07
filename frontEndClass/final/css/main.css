@@ -1,0 +1,332 @@
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+    }
+
+/*http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+.cf:before, .cf:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+    }
+
+.cf:after {
+    clear: both
+}
+ 
+.half{
+    width: 38%;
+}
+
+h1, h2, ul  {
+    margin: 0
+}
+section {
+    margin: 0;
+
+}
+header h1 a {
+    color: #77a2b5;
+
+}
+.container {
+    width: 960px;
+    margin: 0 auto;
+
+
+}
+
+
+header {
+    background: #edced4;
+    }
+nav li {
+    float: left;
+
+}
+.dialog {
+    width: 580px;
+    display: none;
+}
+
+a {
+    color: #ce5391;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+nav a {
+    font-size: 16px;
+    padding: 10px  30px;
+    display: block;
+}
+
+/*pseudo classese: hover, active,focused, visited*/
+.topNav a:hover, .topNav a:active  {
+    background: #ce5391;
+    color: white;
+}
+ 
+ 
+.topNav ul ul   {
+    display: none;
+}
+
+.topNav ul li:hover ul {
+    display: block;
+    position: absolute;
+    background: #d2e4f6;
+    color: white;
+
+}  
+ 
+.topNav li li {
+    float: none;
+}
+nav ul {
+    padding:0;
+}
+/*logo stuff on top and bottom*/
+header h1, footer h2 {
+    background: no-repeat;
+    overflow: hidden;
+    /*hide if screen too small , but still have it if no css*/
+    text-indent: 100%;
+    /*hide it outside the screen*/
+    white-space: nowrap;
+    /*if long line of text, it does not enter the second line*/
+    }
+ 
+header h1 {
+    background: url(../img/iconbig.png) no-repeat;
+    background-size: 100% 100%;
+    height: 50px;
+    width: 171px;
+    padding-bottom: 5px;
+    }
+.login {
+    color: #edced4;
+    float: right;
+}
+.login a {
+    border-left: 1px solid #002344;
+    padding: 0 5px;
+    font-size: 14px;
+}
+.dialog label {
+    display: block;
+}
+/*error and valid are two classes created by jquery validation
+*/
+.error {
+    color: red;
+}
+
+.valid {
+    color: green;
+}
+footer {
+    background: #d2e4f6
+    }
+
+footer h2 {
+    background: url(../img/iconsmall.png) no-repeat;
+    height: 40px;
+    width: 137px;
+   
+    }
+
+nav {
+    background: #d2e4f6;
+
+    }
+footer h2,footer nav {
+    float: left;
+}
+ 
+footer container {
+    float: left;
+ }
+footer small {
+    float: right;
+    color: #77a2b5;
+    padding-top: 8px;
+    font-size: 12px;
+
+}
+footer nav a {
+    font-size: 12px;
+}
+.hero {
+    background: #fff url(../img/bgpinktower.jpg) no-repeat 50% 50%;
+    padding-top: 220px
+}
+
+.hide {
+    display: none;
+}
+.home {
+    background: #fff url(../img/bgpinktower.jpg) no-repeat 50% 50%;
+
+}
+.attraction {
+    background: #fff url(../img/bgtower.jpg) no-repeat 50% 50%;
+
+}
+
+.aandh {
+        background: #fff url(../img/bgmuseum.jpg) no-repeat 50% 50%;
+
+}
+.food {
+            background: #fff url(../img/bgdesert.jpg) no-repeat 50% 50%;
+
+}
+.tourist {
+            background: #fff url(../img/bgfun.jpg) no-repeat 50% 50%;
+
+}
+
+
+.parismap {
+    padding-top: 20px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+
+
+.hero h1 {
+    font-weight: normal;
+    color: white;
+    margin: 0;
+    font-size: 40px;
+    text-shadow: 0 0 20px black;
+    }
+
+.hero h1 strong {
+    display: block;
+    /*give strong elements a block elemet to show on different line*/
+    }
+
+ 
+
+.hero__content {
+    background: #d2e4f6;
+    background: rgba(0, 0, 0, 0.25)
+    }
+
+.hero .container {
+    position: relative;
+    padding-top: 28px;
+    height: 130px
+    }
+
+.details {
+    background: #edced4;
+    
+    }
+.details h2 {
+    color: #ce5391;
+    text-shadow: 1px 1px 0px white;
+
+
+}
+  .details ul {
+    list-style: none;
+    padding: 0;
+    padding-top: 10px;
+     
+    margin: 0 auto;
+    }
+.details_art {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #edced4;
+
+}
+figure {
+    padding: 15px 15px;
+}
+
+figcaption {
+    color: darkgrey;
+}
+figure.figure_right  {
+      float: right;
+
+}
+figure.figure_left  {
+      float: left;
+
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+img {
+    padding: 0px 10px;
+}
+figcaption {
+    display: block;
+}
+.details li {
+    /*use icon image as backgorund here*/
+    width: 75%;
+     padding-left: 60pt;
+    background-repeat: no-repeat;
+    /*default , no need to specify*/
+    background-position: 0 0;
+    margin-bottom: 40px;
+    }
+.details li:last-child {
+    margin: 0;
+}
+
+.parisheart {
+    background: url(../img/icon.png)
+    }
+
+
+p.firstLetter:first-line {
+/*    text-shadow: 1px 1px 0px grey;
+*/    font-size: 1.2rem;
+
+}
+p.firstLetter:first-letter {
+    font-size: 2rem;
+    text-shadow: 2px 2px 0px black;
+    color: #ce5391;
+}
+
+
+ @media only screen and (max-width: 830px) {
+    
+     body, .container,section, .hero, .topNav {
+        float: none;
+        width: auto;
+        margin: 0 0;
+        padding: 0 0;
+     }
+      
+     .hero__content .container h1 { 
+        display: none;
+      }
+
+      .parismap {
+        display: none;
+   
+      }
+      .dialog {
+        display: block;
+        padding: 30px 30px;
+        width: auto;
+      }
+
+      .hero__content {
+        background: none;
+      }
+}
