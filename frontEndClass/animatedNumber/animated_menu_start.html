@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+	<title>Animation</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+  	<script >
+  	$(document).ready(function() {
+	$("#slides li").hover(function() {
+		$(this).css(
+			{"color":"#e8a010"},200);
+		$(this).animate(
+			{ fontSize: "150%" ,  opacity: 1, left: "+=30", borderWidth: "10px" }, 200 ); 
+		$(this).animate(
+			{ fontSize: "100%" ,opacity: 0.2, left: "-=30" }, 100);
+		  
+	}); 
+}); // end ready
+
+</script>   
+	<style>
+	    li {
+		position: relative;
+		list-style-type: none;
+		float: left;
+		padding: 25px;
+		opacity: .25;
+		font-style: bold;
+		font-size: 15px;
+	    }
+
+	</style>
+    </head>
+    <body>
+	<section id="faqs">
+ 	    <p>&nbsp;</p><p>
+	    </p>
+	    <div id="slides">
+	    	
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>0</li>
+
+	    </div>
+
+	</section>
+    
+
+</body></html>
